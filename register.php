@@ -15,9 +15,9 @@
 
     <div class="uk-section uk-container uk-text-center">
         <div class="uk-flex uk-flex-center@s uk-flex-left uk-flex-stretch">
-            <form action="#" class="js-login" method="post">
+            <form action="#" class="js-register" method="post">
                 <fieldset class="uk-fieldset">
-                    <legend class="uk-legend">Login</legend>
+                    <legend class="uk-legend">Register</legend>
                     <div class="uk-margin">
                         <input type="text" class="uk-input" placeholder="Email" name="input_email">
                     </div>
