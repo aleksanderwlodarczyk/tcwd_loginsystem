@@ -4,9 +4,9 @@
     require_once("includes/config.php");
     require_once("includes/links.php");
 
-    ForceLogin();
+    Page::ForceLogin();
 
-    echo $_SESSION['user_id']. "is your user id.";
+    $User = new User($_SESSION['user_id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +17,7 @@
     <title>User dashboard</title>
 </head>
 <body>
-    ihgbiygbde
+    <h2>Dashboard</h2>
+    <h3>Hello <?php echo $User->email; ?>, you signed in at <?php echo $User->reg_time; ?></h3>
 </body>
 </html>

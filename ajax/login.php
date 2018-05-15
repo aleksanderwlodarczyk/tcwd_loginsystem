@@ -10,13 +10,10 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         //Make sure the user does not exits.
-        $findUser = $con->prepare("SELECT `uid`, `password` FROM users WHERE email LIKE :email LIMIT 1");
-        $findUser->bindParam(':email', $email, PDO::PARAM_STR);
-        $findUser->execute();
         
-        if($findUser->rowCount() == 1) {
+        if(User::Find($email, false)) {
             //if user exist -> try sign him in
-            $User = $findUser->fetch(PDO::FETCH_ASSOC);
+            $User = User::Find($email, true);
             $userID = (int) $User['uid'];
             $hash = $User['password'];
 

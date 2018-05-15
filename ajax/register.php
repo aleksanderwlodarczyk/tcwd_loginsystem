@@ -8,12 +8,9 @@
         //do stuff
         $return = [];
         $email = $_POST['email'];
-        //Make sure the user does not exits.
-        $findUser = $con->prepare("SELECT `uid` FROM users WHERE email LIKE :email LIMIT 1");
-        $findUser->bindParam(':email', $email, PDO::PARAM_STR);
-        $findUser->execute();
+        //Make sure the user does not exits
         
-        if($findUser->rowCount() == 1) {
+        if(User::Find($email, false)) {
             $return['error'] = "You already have an account";
         }else{
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);

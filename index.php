@@ -2,7 +2,7 @@
     define("__CONFIG__", true);
      require_once("includes/config.php");
      require_once("includes/links.php");
-     ForceDashboard();
+     Page::ForceDashboard();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
