@@ -2,6 +2,7 @@
     define("__CONFIG__", true);
      require_once("includes/config.php");
      require_once("includes/links.php");
+     ForceDashboard();
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -27,7 +28,7 @@
 
                         <button class="uk-button uk-button-default">Register</button>
                     </div>
-                    
+
                     <div class="uk-margin uk-alert uk-alert-danger js-error" style="visibility: hidden;">
                         test
                     </div>

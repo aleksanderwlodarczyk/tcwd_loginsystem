@@ -3,6 +3,9 @@
 
     require_once("includes/config.php");
     require_once("includes/links.php");
+
+    ForceLogin();
+
     echo $_SESSION['user_id']. "is your user id.";
 ?>
 <!DOCTYPE html>
