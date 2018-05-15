@@ -26,16 +26,13 @@
             $user_id = $con->lastInsertId();
 
             $_SESSION['user_id'] = (int) $user_id;
-            $retrun['redirect'] = "dashboard.php?message=welcome";
+            $retrun['redirect'] = "dashboard.php";
             $return['is_logged_in'] = true;
         }
         //Make sure the ser CAN be added AND is added
 
         //Return the proper information back to JavaScript to redirect us
 
-        $return['redirect'] = "register.php";
-
-        $return['test'] = "działa lol xd";
         echo json_encode($return); exit;
 
     }else{

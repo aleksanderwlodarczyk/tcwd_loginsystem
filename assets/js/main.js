@@ -34,13 +34,13 @@ $(document).on('submit', 'form.js-register, form.js-login', function(event){
         //Whatever the data is
         console.log(data);
         if(data.redirect !== undefined){
-            //window.location = data.redirect;
+            window.location = data.redirect;
         }
         if(data.error !== undefined){
             _error.text(data.error);
             _error.css("visibility", "visible");
         }
-        alert(data.test);
+
     })
     .fail(function ajaxFailed(e) {
         //when failed
