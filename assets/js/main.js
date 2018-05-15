@@ -1,4 +1,4 @@
-$(document).on('submit', 'form.js-login', function(event){
+$(document).on('submit', 'form.js-register, form.js-login', function(event){
     event.preventDefault();
 
     var _form = $(this);
@@ -25,7 +25,7 @@ $(document).on('submit', 'form.js-login', function(event){
 
     $.ajax({
         type: 'POST',
-        url: "ajax/register.php",
+        url: (_form.hasClass('js-login')) ? "ajax/login.php" : "ajax/register.php",
         data: dataObject,
         dataType: 'json',
         async: true,
@@ -35,7 +35,10 @@ $(document).on('submit', 'form.js-login', function(event){
         console.log(data);
         if(data.redirect !== undefined){
             //window.location = data.redirect;
-
+        }
+        if(data.error !== undefined){
+            _error.text(data.error);
+            _error.css("visibility", "visible");
         }
         alert(data.test);
     })
@@ -50,3 +53,4 @@ $(document).on('submit', 'form.js-login', function(event){
     //alert('form was submitted');
     return false;
 });
+//

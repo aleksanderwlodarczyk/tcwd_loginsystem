@@ -27,6 +27,10 @@
 
                         <button class="uk-button uk-button-default">Register</button>
                     </div>
+                    
+                    <div class="uk-margin uk-alert uk-alert-danger js-error" style="visibility: hidden;">
+                        test
+                    </div>
 
                 </fieldset>
             </form>
