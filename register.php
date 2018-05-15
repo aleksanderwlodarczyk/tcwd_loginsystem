@@ -1,6 +1,7 @@
 <?php
     define("__CONFIG__", true);
      require_once("includes/config.php");
+     require_once("includes/links.php");
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -15,7 +16,7 @@
 
     <div class="uk-section uk-container uk-text-center">
         <div class="uk-flex uk-flex-center@s uk-flex-left uk-flex-stretch">
-            <form action="#" class="js-register" method="post">
+            <form action="#" class="js-register">
                 <fieldset class="uk-fieldset">
                     <legend class="uk-legend">Register</legend>
                     <div class="uk-margin">
@@ -24,7 +25,7 @@
                     <div class="uk-margin">
                         <input type="password" class="uk-input" placeholder="Password" name="input_password">
 
-                        <button class="uk-button uk-button-default">Login</button>
+                        <button class="uk-button uk-button-default">Register</button>
                     </div>
 
                 </fieldset>

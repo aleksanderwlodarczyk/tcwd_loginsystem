@@ -1,6 +1,7 @@
 <?php
     define("__CONFIG__", true);
      require_once("includes/config.php");
+     require_once("includes/links.php");
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -23,8 +24,12 @@
                     </div>
                     <div class="uk-margin">
                         <input type="password" class="uk-input" placeholder="Password" name="input_password">
-
+                    </div>
+                    <div class="uk-margin uk-flex uk-flex-left">
                         <button class="uk-button uk-button-default">Login</button>
+                    </div>
+                    <div class="uk-margin uk-alert uk-alert-danger js-error" style="visibility: hidden;">
+                        test
                     </div>
 
                 </fieldset>
